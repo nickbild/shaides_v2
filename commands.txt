@@ -1,0 +1,2 @@
+sudo docker run -it --rm -v /home/nick/software/shaides_v2:/shaides_v2 --runtime nvidia --network host nvcr.io/nvidia/l4t-pytorch:r32.4.2-pth1.5-py3
+
