@@ -1,1 +1,6 @@
-# shaides_v2
+# ShAIdes 2.0
+
+UpgrAIde your ShAIdes!
+
+Coming soon.
+
