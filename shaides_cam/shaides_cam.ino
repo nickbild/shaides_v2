@@ -1,12 +1,11 @@
+////
+// Modified version of "CameraWebServer" example for "AI Thinker ESP32-CAM".
+////
+
 #include "esp_camera.h"
 #include "secret.h"
 #include <WiFi.h>
 
-// Select camera model
-//#define CAMERA_MODEL_WROVER_KIT
-//#define CAMERA_MODEL_ESP_EYE
-//#define CAMERA_MODEL_M5STACK_PSRAM
-//#define CAMERA_MODEL_M5STACK_WIDE
 #define CAMERA_MODEL_AI_THINKER
 
 #include "camera_pins.h"
@@ -17,9 +16,9 @@ const char* password = PASS;
 void startCameraServer();
 
 void setup() {
-  Serial.begin(115200);
-  Serial.setDebugOutput(true);
-  Serial.println();
+//  Serial.begin(115200);
+//  Serial.setDebugOutput(true);
+//  Serial.println();
 
   camera_config_t config;
   config.ledc_channel = LEDC_CHANNEL_0;
@@ -55,7 +54,7 @@ void setup() {
   // camera init
   esp_err_t err = esp_camera_init(&config);
   if (err != ESP_OK) {
-    Serial.printf("Camera init failed with error 0x%x", err);
+//    Serial.printf("Camera init failed with error 0x%x", err);
     return;
   }
 
@@ -78,16 +77,16 @@ void setup() {
 
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
-    Serial.print(".");
+//    Serial.print(".");
   }
-  Serial.println("");
-  Serial.println("WiFi connected");
+//  Serial.println("");
+//  Serial.println("WiFi connected");
 
   startCameraServer();
 
-  Serial.print("Camera Ready! Use 'http://");
-  Serial.print(WiFi.localIP());
-  Serial.println("' to connect");
+//  Serial.print("Camera Ready! Use 'http://");
+//  Serial.print(WiFi.localIP());
+//  Serial.println("' to connect");
 }
 
 void loop() {
