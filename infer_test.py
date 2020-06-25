@@ -135,7 +135,9 @@ def lookback_contains(recent, value):
 
 
 def main():
+    os.system("wget -q -O out.jpg http://192.168.1.185/capture?_cb=1593037200070")
     img = Image.open('out.jpg')
+    img = img.resize((300, 300))
     index_objects, score_objects = predict_image_class(img, "objects")
     print("{} {}".format(index_objects, score_objects))
 
