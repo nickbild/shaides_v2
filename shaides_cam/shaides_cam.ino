@@ -43,7 +43,7 @@ void setup() {
   config.pixel_format = PIXFORMAT_JPEG;
 
   config.frame_size = FRAMESIZE_QVGA;
-  config.jpeg_quality = 12;
+  config.jpeg_quality = 20;
   config.fb_count = 2;
 
 #if defined(CAMERA_MODEL_ESP_EYE)

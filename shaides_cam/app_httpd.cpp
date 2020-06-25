@@ -275,19 +275,19 @@ static esp_err_t capture_handler(httpd_req_t *req){
         return ESP_FAIL;
     }
 
-    box_array_t *net_boxes = face_detect(image_matrix, &mtmn_config);
+    box_array_t *net_boxes = NULL; //face_detect(image_matrix, &mtmn_config);
 
-    if (net_boxes){
-        detected = true;
-        if(recognition_enabled){
-            face_id = run_face_recognition(image_matrix, net_boxes);
-        }
-        draw_face_boxes(image_matrix, net_boxes, face_id);
-        free(net_boxes->score);
-        free(net_boxes->box);
-        free(net_boxes->landmark);
-        free(net_boxes);
-    }
+//    if (net_boxes){
+//        detected = true;
+//        if(recognition_enabled){
+//            face_id = run_face_recognition(image_matrix, net_boxes);
+//        }
+//        draw_face_boxes(image_matrix, net_boxes, face_id);
+//        free(net_boxes->score);
+//        free(net_boxes->box);
+//        free(net_boxes->landmark);
+//        free(net_boxes);
+//    }
 
     jpg_chunking_t jchunk = {req, 0};
     s = fmt2jpg_cb(out_buf, out_len, out_width, out_height, PIXFORMAT_RGB888, 90, jpg_encode_stream, &jchunk);
