@@ -1,4 +1,5 @@
 shaides_cam/secret.h
 .DS_Store
 __pycache__/
+params.cfg
 
