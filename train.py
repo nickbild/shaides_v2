@@ -9,8 +9,8 @@ from torch.autograd import Variable
 
 img_width = 300
 img_height = 300
-class_count = 3 # gestures = 2, objects = 3
-classifier_type = "objects" # "objects", "gestures"
+class_count = 2 # gestures = 2, objects = 3
+classifier_type = "gestures" # "objects", "gestures"
 
 
 class Net(nn.Module):
@@ -195,7 +195,7 @@ def train(num_epochs):
         test_acc = test()
 
         # Save the model if it is a new best for accuracy.
-        if test_acc >= best_acc or train_acc >= best_acc_train:
+        if test_acc > best_acc or train_acc > best_acc_train:
             save_models(epoch, train_acc, test_acc)
             best_acc = test_acc
             best_acc_train = train_acc
@@ -205,7 +205,7 @@ def train(num_epochs):
 
 
 def adjust_learning_rate(epoch):
-    lr = 0.000001
+    lr = 0.00001
 
     if epoch > 800:
         lr = lr / 1000
@@ -241,7 +241,7 @@ if __name__ == "__main__":
     if cuda_avail:
         model.cuda()
 
-    optimizer = Adam(model.parameters(), lr=0.000001, weight_decay=0.0001)
+    optimizer = Adam(model.parameters(), lr=0.00001, weight_decay=0.0001)
     loss_fn = nn.CrossEntropyLoss()
 
     train_loader = load_train_dataset(train_transformations)
