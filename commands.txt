@@ -1,4 +1,4 @@
-sudo docker run -it --rm -v /home/nick/software/shaides_v2:/shaides_v2 --runtime nvidia --network host nvcr.io/nvidia/l4t-pytorch:r32.4.2-pth1.5-py3
+sudo docker run -it --rm --ipc=host -v /home/nick/software/shaides_v2:/shaides_v2 --runtime nvidia --network host nvcr.io/nvidia/l4t-pytorch:r32.4.2-pth1.5-py3
 
 curl -o a.jpg http://192.168.1.185/capture?_cb=1593037200070
 
