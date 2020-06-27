@@ -12,6 +12,12 @@ My AI is *still* so bright, I gotta wear shades.
 
 ## How It Works
 
+ShAIdes was initially designed as an all-in-one device; a camera attached to the glasses was hardwired to an NVIDIA Jetson Nano that the user hung around their neck in a small box.  ShAIdes 2.0 greatly reduces the size and power requirements of the device by mounting a tiny ESP32-CAM to a pair of glasses.
+
+The Jetson Nano has been replaced by a Jetson Xavier NX, and rather than carrying it around, it has been repurposed as an edge AI device.  The ESP32-CAM remotely communicates with the NX over WiFi.  As such, the Jetson can now be located anywhere in the same building (or further, depending on network configuration) as the device, and no longer needs to draw on the device battery power.
+
+The fundamentals of the project (model creation, training, and inference) are the same as the [original ShAIdes](https://github.com/nickbild/shaides) and can be referenced for anyone needing further details.
+
 ## Media
 
 YouTube demonstration:  
