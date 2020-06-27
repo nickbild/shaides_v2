@@ -16,6 +16,8 @@ ShAIdes was initially designed as an all-in-one device; a camera attached to the
 
 The Jetson Nano has been replaced by a Jetson Xavier NX, and rather than carrying it around, it has been repurposed as an edge AI device.  The ESP32-CAM remotely communicates with the NX over WiFi.  As such, the Jetson can now be located anywhere in the same building (or further, depending on network configuration) as the device, and no longer needs to draw on the device battery power.
 
+The reason for upgrading the Jetson to an NX is to minimize inference latency.  Some small amount of latency is added by switching from a hardwired camera to a WiFi-enabled camera, so the additional horsepower of the NX gets that time back on the processing side.
+
 The fundamentals of the project (model creation, training, and inference) are the same as the [original ShAIdes](https://github.com/nickbild/shaides) and can be referenced for anyone needing further details.
 
 ## Media
