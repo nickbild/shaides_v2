@@ -4,6 +4,10 @@ UpgrAIde your ShAIdes!
 
 Coming soon.
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/nickbild/shaides_v2/master/media/teaser.gif">
+</p>
+
 ## How It Works
 
 ## Media
