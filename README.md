@@ -2,11 +2,13 @@
 
 UpgrAIde your ShAIdes!
 
-Coming soon.
+ShAIdes 2.0 is a much smaller, more practical, redesign of the [original ShAIdes](https://github.com/nickbild/shaides).  Effect change in your surroundings by wearing these AI-enabled glasses. ShAIdes is a transparent UI for the real world.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/nickbild/shaides_v2/master/media/teaser.gif">
 </p>
+
+My AI is *still* so bright, I gotta wear shades.
 
 ## How It Works
 
