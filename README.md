@@ -8,6 +8,9 @@ Coming soon.
 
 ## Media
 
+YouTube demonstration:  
+[ShAIdes 2.0 video](https://www.youtube.com/watch?v=j2iDt1-StdU)
+
 The ShAIdes:
 
 ![front](https://raw.githubusercontent.com/nickbild/shaides_v2/master/media/glasses_front_sm.jpg)
